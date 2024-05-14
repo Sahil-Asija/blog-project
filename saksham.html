@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog page</title>
+    <link rel="stylesheet" href="saksham.css">
+    <link rel="stylesheet" href="util.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet" href="saksham.css"/>
+    <style id="theme-styles"></style>
+    <style id="theme-styles">
+        
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const savedTheme = localStorage.getItem('theme');
+            const currentTheme = savedTheme ? savedTheme : 'light-mode';
+
+            // Apply the current theme
+            document.body.classList.add(currentTheme);
+
+            // Function to toggle between light and dark themes for body
+            window.toggleMode = function () {
+                const body = document.body;
+                body.classList.toggle('light-mode');
+                body.classList.toggle('dark-mode');
+                // Save the user's preference in localStorage
+                const newTheme = body.classList.contains('light-mode') ? 'light-mode' : 'dark-mode';
+                localStorage.setItem('theme', newTheme);
+            };
+
+            // Function to show color picker
+            window.showColorPicker = function () {
+                var colorPicker = document.createElement("input");
+                colorPicker.type = "color";
+                colorPicker.addEventListener("input", function () {
+                    changeTextColor(colorPicker.value);
+                    // Remove the color picker after selecting a color
+                    document.body.removeChild(colorPicker);
+                });
+                // Handle Enter key press
+                colorPicker.addEventListener("keydown", function (event) {
+                    if (event.key === "Enter") {
+                        changeTextColor(colorPicker.value);
+                        // Remove the color picker after pressing Enter
+                        document.body.removeChild(colorPicker);
+                    }
+                });
+
+                // Append the color picker to the body
+                document.body.appendChild(colorPicker);
+
+                // Open the color picker dialog
+                colorPicker.click();
+            };
+
+            function changeTextColor(color) {
+                var coloredText = document.getElementById("coloredText");
+                coloredText.style.color = color;
+            }
+        });
+    </script>
+</head>
+<body>
+    <nav id="god">
+        <nav class="navigation">
+            <div class="nav-left">
+                <a href="saksham.html">
+                    <span><img src="goder.png" height="100px" width="94px" alt=""></span>
+                </a>
+                <ul>
+                    <li><a href="saksham.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="startup.html">Startup</a></li>
+                    <li><a href="travel.html">Travel</a></li>
+                    <li><a href="photography.html">Photography</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><div class="rightt"style="margin-left: 0px;"><a href="login.html">Login</a></li></div>
+                    <li><div class="rong" style="margin-left: 10px;"><script>
+                    let now=new Date()
+                    let dts= now.getDate()
+                    let mth= now.getMonth()
+                    let yrs=now.getFullYear()
+                    document.write(dts + "-"+ mth + "-" + yrs)
+                    </script>
+                    </div>
+                    <div class="container" style="margin-left: 0px;">
+                        <button class="btn btn-primary" onclick="toggleMode()">light/dark mode</button>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+            <div class="got" id="coloredText">
+                <h1 style="font-size: 27px; margin-top: 70px;">"The secret of getting ahead is getting started"
+                    <br>
+                Mark Twain
+                </h1>
+                <p style="margin-top: 50px;margin-left: 70px;margin-right: 50px;">Explore Hub is a website which lets you submit an article which upon approval will be up on our website and you
+                    can get a good amount of reach from here!</p>
+                <p style="margin-left: 70px;margin-right: 50px; text-align: justify;">In the spirit of fostering growth in each of us our aim is to tick off your day with one key learning, It
+                    can be about our industry, a customer, a data insight, a tool, a new skill, or something else.
+                    We provide the readers with unconventional strategies used by renowned and successful entrepreneurs to
+                    overcome significant challenges in their journey.HUSTLE HUB provides access to experts in a variety of business disciplines through its various media channels and fosters peer-to-peer interaction in its vibrant online community forums. The breadth and range of businesses HUSTLE HUB serves include sole proprietorships, home-based businesses and part-time businesses, all the way to the most esoteric and sophisticated ventures.
+                    The blog aims to provide the readers with unconventional strategies used by renowned and successful entrepreneurs who are willing to share their success mantras that they used to overcome significant challenges in their journey. From early-stage founders to CEOs, these leaders share their unique experiences and recommendations on this platform.
+                    HUSTLE HUB’s content is crafted by entrepreneurs for entrepreneurs, offering the necessary insights for personal growth through in-the-trenches, how-to content authored by subject matter experts, thought leaders and business professionals </p>
+                    <button onclick="showColorPicker()" class="btn btn-primary" style="margin-left: 70px;margin-right: 50px;">Change Text Color</button>
+            </div>
+    </nav>    
+        <div class="home-articles">
+            <h2>Featured Articles</h2>
+        </div>
+        <div class="home-article ">
+            <div class="home-article-img">
+                <a href="https://startupnation.com/start-your-business/12-keys-to-choosing-and-developing-a-side-hustle-idea/" ><img src="noob.jpg" alt=""></a>
+            </div>
+            <div class="home-article-content ">
+                
+                <h3>When it comes to making extra income, one of the coolest and most profitable side hustles 
+                    over the past few years has been reselling sneakers. Tales abound of sneakerheads 
+                    boxing up profits by flipping Air Jordans at triple-digit margins.
+                    <a href="https://startupnation.com/start-your-business/12-keys-to-choosing-and-developing-a-side-hustle-idea/" >
+                        <br>
+                    <button type="button" class="btn btn-primary" value="hi there" onclick="sayhello()">Click To Learn More</button></a>
+                    <script>
+                        function sayhello(){
+                        alert("You are being directed to another site");}
+                    </script>
+                </h3>
+            </div>
+        </div>    
+        <div class="rope">
+            <hr>
+        </div>
+        <div class="home-article ">
+            <div class="home-article-img">
+                <a href="https://startupnation.com/start-your-business/choosing-a-business/"><img src="pro.jpg" alt=""></a>
+            </div>
+            <div class="home-article-content ">
+                <h3>Americans continue starting businesses at a near-record pace, according
+                    to the most recent statistics from the U.S. Census Bureau.
+                Projections of business starts in March 2023 outpaced February figures
+                    by more than 5%, according to the business formation statistics the Census Bureau released in April. 
+                    <a href="https://startupnation.com/start-your-business/choosing-a-business/">
+                        <button type="button" class="btn btn-primary" onclick="sayhello()">Click To Learn More</button></a></h3>
+                        <br>
+                        <script>
+                            function sayhello(){
+                            alert("You are being directed to another site");}
+                        </script>    
+                    
+            </div>
+        </div>    
+        <div class="rope">
+            <hr>
+        </div>
+        <div class="home-article ">
+            <div class="home-article-img">
+                <a href="https://startupnation.com/start-your-business/get-inspired/were-you-just-fired-from-google-it-might-be-time-to-start-your-own-business/"><img src="img.jpg" alt=""></a>
+            </div>
+            <div class="home-article-content ">
+                <h3>A bit more than halfway through a disquieting year that has seen tens of thousands of workers laid off, big tech 
+                    firms are enjoying a monstrous rebound in market capitalization. But Silicon Valley is giving no indication
+                    that a hiring or rehiring spree is on the horizon.go to hero rock 
+                    Might this shift actually lay groundwork for laid-off workers to take a different direction in life—one.
+                
+                    <a href="https://startupnation.com/start-your-business/get-inspired/were-you-just-fired-from-google-it-might-be-time-to-start-your-own-business/">
+                    <button type="button" class="btn btn-primary" onclick="sayhello()">Click To Learn More</button></a></h3>
+                    <br>
+                    <script>
+                        function sayhello(){
+                        alert("You are being directed to another site");}
+                    </script>
+            </div>
+        </div>    
+        <div class="rope">
+            <hr>
+        </div>
+        <div class="home-article ">
+            <div class="home-article-img">
+                <a href="https://startupnation.com/manage-your-business/an-enterprises-guide-to-web3-and-blockchain-domains/" ><img src="nub.jpg" alt=""></a>
+            </div>
+            <div class="home-article-content ">
+                <h3>
+                    So much to do, so little time. That’s the perennial challenge many enterprises face. 
+                    And with the recent growth in Web3 , 
+                    it’s hard for brand owners to know if this is merely a passing fad, or if this is a trend that they should be paying attention to.
+                    Here’s what enterprises and brand owners need to know about Web3 
+        
+                    <a href="https://startupnation.com/manage-your-business/an-enterprises-guide-to-web3-and-blockchain-domains/" >
+                        <button type="button" class="btn btn-primary" onclick="sayhello()">Click To Learn More</button></a></h3>
+                        <br>
+                        <script>
+                            function sayhello(){
+                            alert("You are being directed to another site");}
+                        </script>
+            </div>
+        </div>
+        <div class="rope">
+            <hr>
+        </div>
+        <div class="footer">
+            <p>copyright &copy;Explore Hub</p>
+        </div>
+</body>    
+</html>

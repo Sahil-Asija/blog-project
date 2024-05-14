@@ -1,0 +1,240 @@
+*{
+    margin: 5px;
+    padding: 0x; 
+  }
+  .navigation {
+    margin-top: 20px;
+    display: flex;
+    justify-content: ;
+    align-items: ;
+    padding-left: 200px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+  .nav-left {
+    display: flex;
+    margin-top: 50px;
+  }
+  
+  .nav-left span {
+    font-size: 45px;
+    padding-top: 10px;
+  }
+  
+  .nav-left ul {
+    display: flex;
+    align-items: center;
+    margin-top: 42px;
+    margin-bottom: 42px;
+    font-size: 22px;
+    padding-bottom: 23px;
+  }
+  
+  .nav-left ul li {
+    list-style: none;
+    margin: 0 25px;
+    font-weight: bold;
+  }
+  h1{
+    text-align: center;
+    text-transform: capitalize;
+    font-style: italic;
+    padding: 20px;
+     }
+   .nav-left ul li a{
+    text-decoration: none;
+    color: blue;
+   }
+p{
+  font-size:20px ;
+  margin-bottom: 25px;
+}
+#god{
+  background-image: url(bg.jpg);
+  height: 840px;
+  width: 1640px;
+}
+.content{
+  border:2px;
+  border-color:black;
+  height: 350px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  }
+#trend{
+  margin-top: 100px;
+}
+#work{
+  margin-top: 100px;
+}
+
+.home-articles{
+  padding-top: 50px;
+  margin-top: 50px;
+  text-align: center;
+}
+.home-article{
+ display:flex;
+ padding: 40px;
+ margin-left: 80px;
+ margin-right:80px ;
+}
+
+.home-article img{
+  width:350px;
+  padding-right: 40px;
+  transition: transform .2s;
+  margin:auto;
+}
+.home-article img:hover{
+  -ms-transform: scale(1.2); 
+  -webkit-transform: scale(1.2); 
+  transform: scale(1.2); 
+}
+.home-article content{
+  align-self: center;
+  padding: 25px;
+  padding-left: 200px;
+  background-color: red;
+}
+.rope{
+  margin-left: 80px;
+  margin-right: 80px;
+}
+a:link {
+  color:black;
+  background-color: transparent;
+  text-decoration: none;
+}
+.footer{
+  height: 50px;
+  width: 1630px;
+  background-color: purple;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:white;
+  flex-direction: column;
+}
+.contact-content{  
+  height: 550px;
+  margin-top: 32px;
+  padding: 9px;
+  position: relative; 
+  overflow: hidden;
+  background-image:url("stop.jpeg");
+  background-size: 1250px 700px;
+  background-repeat: no-repeat;
+  width:90%;
+}
+.form-box{
+  width: 70%;
+  margin: 12px 0px;
+}
+.about-us{ 
+  margin: 10px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: 300px 200px 100px ;
+  grid-template-rows: 100px 200px 100px ;
+  row-gap: 12px ;
+  column-gap: 50px ;
+}
+.about-us img{
+  height: 400px;
+  width: 300px;
+  border-radius: 20px;
+  object-fit: cover;
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+.about-ush{
+  height:40px;
+  width:700px;
+}
+#para{
+  height:100px;
+  width: 750px;
+  grid-column-start: 2;
+  grid-row-start: 2;
+  text-align: justify;
+}
+#btn{
+  height: 20px;
+  width:70px;
+  grid-column-start: 3;
+  grid-row-start: 10;
+}
+#cards-container{
+  height:60vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap:70px;
+  margin-top: 50px;
+}
+.card{
+  height: 80%;
+  width:24%;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  transition: all ease 0.6s;
+  overflow: hidden;
+  overflow: auto;
+}
+#card1{
+  background-image:url(pro.jpg);
+}
+#card2{
+  background-image:url(nub.jpg);
+}
+.overlay{
+  height:900px;
+  width:100%;
+  background-color: chocolate;
+  padding: 60px;
+  padding-top: 10px;
+  opacity: 0;
+  transition: all ease 0.6s;
+  text-align: justify;
+
+}
+.overlay h4{
+  color:black;
+  font-size: 40px;
+  text-transform:uppercase;
+  white-space: nowrap;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+.overlay p{
+  color:black;
+  font-size: 18px;
+}
+.card:hover .overlay{
+  opacity: 1;
+}
+.card:hover{
+  transform:rotate3d(-1,1,0,23deg);
+}
+.rong{
+  padding-left: 0px;
+  padding-top: 30px;
+}
+.rightt{
+  padding-left: 200px;
+}
+body.light-mode {
+  background-color: #fff;
+  color: black;
+  
+}
+body.dark-mode {
+  background-color: black;
+  color: #fff;
+}
+.content {
+  transition: color 0.5s;
+}
